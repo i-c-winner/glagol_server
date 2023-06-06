@@ -5,7 +5,7 @@ const port = 3000
 const path=require('path')
 const url=path.resolve(__dirname, './dist/index.html')
 
-app.get('/', (req, res) => {
+app.get('/:room', (req, res) => {
   res.type('html')
   res.sendFile(url)
 })
